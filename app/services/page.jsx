@@ -3,37 +3,44 @@
 import { BsArrowDownRight } from "react-icons/bs";
 import Link from "next/link";
 
+
 const services = [
   {
     num: "01",
     title: "Web Development",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque tenetur.",
+      "Full-stack web development using modern frameworks like Vue.js, React.js, and Node.js. Expertise in building robust and scalable applications tailored to business needs.",
     href: "",
   },
   {
     num: "02",
-    title: "UI/UX Design",
+    title: "DevOps & Cloud Integration",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque tenetur.",
+      "Streamline development and deployment processes through automation, cloud resource management (AWS, GCP), and continuous integration using tools like GitHub Actions and Docker.",
     href: "",
   },
   {
     num: "03",
-    title: "Logo Design",
+    title: "Machine Learning & MLOps",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque tenetur.",
+      "End-to-end MLOps workflow management with expertise in model deployment using AWS SageMaker, TensorFlow, and PyTorch. Ensuring seamless machine learning operations and performance.",
     href: "",
   },
   {
     num: "04",
-    title: "SEO",
+    title: "SEO & Website Optimization",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque tenetur.",
+      "Enhancing website performance through keyword research, on-page/off-page optimization, and technical improvements to achieve better search engine rankings and user engagement.",
+    href: "",
+  },
+  {
+    num: "05",
+    title: "UI/UX Design",
+    description:
+      "Designing user-centered interfaces with a focus on usability, accessibility, and seamless user experiences. Skilled in using Figma and CSS frameworks like Tailwind CSS.",
     href: "",
   },
 ];
-
 import { motion } from "framer-motion";
 
 const Services = () => {

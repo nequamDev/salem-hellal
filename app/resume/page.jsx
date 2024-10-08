@@ -7,39 +7,42 @@ import {
   FaReact,
   FaFigma,
   FaNodeJs,
+  FaPython,
+  FaRust,
+  FaVuejs,
+  FaAngular,
+  FaAws,
+
+
 } from "react-icons/fa";
 
-import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
-
+import { SiTailwindcss, SiPytorch, SiPostgresql,SiTensorflow, SiNextdotjs } from "react-icons/si";
 // about data
+
 const about = {
-  title: "About me",
+  title: "About Me",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
+    "DevOps Engineer with a passion for developing innovative solutions, integrating cloud services, and ensuring the seamless deployment of applications. Skilled in MLOps, full-stack development, and automation.",
   info: [
     {
       fieldName: "Name",
-      fieldValue: "Luke Coleman",
+      fieldValue: "Salem Hellal",
     },
     {
       fieldName: "Phone",
-      fieldValue: "(+40) 321 654 678",
+      fieldValue: "(+216) 58 911 308",
     },
     {
       fieldName: "Experience",
-      fieldValue: "12+ Years",
-    },
-    {
-      fieldName: "Skype",
-      fieldValue: "luke.01",
+      fieldValue: "3+ Years",
     },
     {
       fieldName: "Nationality",
-      fieldValue: "American",
+      fieldValue: "Tunisian",
     },
     {
       fieldName: "Email",
-      fieldValue: "luke.01@gmail.com",
+      fieldValue: "salem_hellal@protonmail.com",
     },
     {
       fieldName: "Freelance",
@@ -47,131 +50,112 @@ const about = {
     },
     {
       fieldName: "Languages",
-      fieldValue: "English, Spanish",
+      fieldValue: "English, French, Arabic",
     },
   ],
 };
 
-// experience data
 const experience = {
   icon: "/assets/resume/badge.svg",
-  title: "My experience",
+  title: "My Experience",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
+    "Skilled in orchestrating complex workflows, managing cloud services, and developing full-stack web applications.",
   items: [
     {
-      company: "Tech Solutions Inc.",
-      position: "Full Stack Developer",
-      duration: "2022 - Present",
+      company: "Ubiai",
+      position: "DevOps Engineer",
+      duration: "Apr/2023 - Feb/2024",
+      responsibilities: [
+        "Orchestrated MLOps workflows with GitHub, Amazon SageMaker, and AWS Lambda.",
+        "Managed serverless resources across AWS, ensuring efficient operation and scalability.",
+        "Migrated and optimized PostgreSQL databases for performance and data integrity.",
+        "Integrated monitoring and logging solutions using Prometheus and Grafana.",
+        "Collaborated on Salesforce platform integration and web app feature development using Django and Angular.",
+        "Automated deployment and testing processes using GitHub Actions, AWS, and Selenium.",
+      ],
     },
     {
-      company: "Web Design Studio",
-      position: "Front-End Developer Intern",
-      duration: "Summer 2021",
+      company: "Freelancer",
+      position: "Full-Stack Developer",
+      duration: "Feb/2024 - Currently",
+      responsibilities: [
+        "Developed a full-stack web application using Vue.js and Node.js.",
+        "Debugged and compiled a Rust and Next.js web application for multi-platform deployment.",
+        "Documented full-stack web application deployment processes.",
+      ],
     },
     {
-      company: "E-commerce Startup",
-      position: "Freelance Web Developer",
-      duration: "2020 - 2021",
+      company: "Freelancer",
+      position: "WordPress Developer",
+      duration: "June/2022 - Apr/2023",
+      responsibilities: [
+        "Developed WordPress websites, optimized performance, and ensured seamless hosting transfers.",
+        "Implemented on-page and off-page SEO strategies for improved search engine rankings.",
+        "Uploaded scripts to Linux servers and implemented security measures.",
+      ],
     },
     {
-      company: "Tech Academy",
-      position: "Teaching Assistant",
-      duration: "2019 - 2020",
-    },
-    {
-      company: "Digital Agency",
-      position: "UI/UX Designer",
-      duration: "2018 - 2019",
-    },
-    {
-      company: "Software Development Firm",
-      position: "Junior Developer",
-      duration: "2017 - 2018",
+      company: "CES Lab",
+      position: "Research Assistant",
+      duration: "Feb/2022 - June/2022",
+      responsibilities: [
+        "Preprocessed datasets using Python (NumPy, Pandas) for machine learning tasks.",
+        "Trained machine learning models using TensorFlow, Keras, and PyTorch.",
+        "Developed and deployed an IoT-based Intrusion Detection System on a Raspberry Pi.",
+        "Documented and communicated research findings.",
+      ],
     },
   ],
 };
 
-// education data
 const education = {
   icon: "/assets/resume/cap.svg",
-  title: "My education",
+  title: "My Education",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
+    "Bachelor's in Computer Engineering with a strong foundation in programming, machine learning, and cloud computing.",
   items: [
     {
-      institution: "Online Course Platform",
-      degree: "Full Stack Web Development Bootcamp",
-      duration: "2023",
-    },
-    {
-      institution: "Codecademy",
-      degree: "Front-end Track",
-      duration: "2022",
-    },
-    {
-      institution: "Online Course",
-      degree: "Programming Course",
-      duration: "2020 - 2021",
-    },
-    {
-      institution: "Tech Institute",
-      degree: "Certified Web Developer",
-      duration: "2019",
-    },
-    {
-      institution: "Design School",
-      degree: "Diploma in Graphic Design",
-      duration: "2016 - 2018",
-    },
-    {
-      institution: "Community College",
-      degree: "Associate Degree in Computer Science",
-      duration: "2014 - 2016",
+      institution: "University of Monastir",
+      degree: "Bachelor in Computer Engineering",
+      duration: "2019 - 2022",
     },
   ],
 };
 
-// skills data
 const skills = {
-  title: "My skills",
-  description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates quibusdam, sunt explicabo inventore.",
+  title: "My Skills",
+  description: "Proficient in multiple programming languages, frameworks, cloud services, and machine learning tools.",
   skillList: [
-    {
-      icon: <FaHtml5 />,
-      name: "html 5",
-    },
-    {
-      icon: <FaCss3 />,
-      name: "css 3",
-    },
-    {
-      icon: <FaJs />,
-      name: "javascript",
-    },
-    {
-      icon: <FaReact />,
-      name: "react.js",
-    },
-    {
-      icon: <SiNextdotjs />,
-      name: "next.js",
-    },
-    {
-      icon: <SiTailwindcss />,
-      name: "tailwind.css",
-    },
-    {
-      icon: <FaNodeJs />,
-      name: "node.js",
-    },
-    {
-      icon: <FaFigma />,
-      name: "figma",
-    },
+    { icon: <FaPython />, name: "Python" },
+    { icon: <FaRust />, name: "Rust" },
+    { icon: <FaHtml5 />, name: "HTML 5" },
+    { icon: <FaCss3 />, name: "CSS 3" },
+    { icon: <FaJs />, name: "JavaScript" },
+    { icon: <FaReact />, name: "React.js" },
+    { icon: <SiNextdotjs />, name: "Next.js" },
+    { icon: <SiTailwindcss />, name: "Tailwind CSS" },
+    { icon: <FaNodeJs />, name: "Node.js" },
+    { icon: <FaVuejs />, name: "Vue.js" },
+    { icon: <FaAngular />, name: "Angular" },
+    { icon: <FaFigma />, name: "Figma" },
+    { icon: <FaAws />, name: "AWS" },
+    { icon: <SiTensorflow />, name: "TensorFlow" },
+    { icon: <SiPytorch />, name: "PyTorch" },
+    { icon: <SiPostgresql />, name: "PostgreSQL" },
   ],
 };
+
+const contact = {
+  phone: "(+216) 58 911 308",
+  email: "salem_hellal@protonmail.com",
+  linkedin: "/in/salem-hellal-69058a218",
+};
+
+const languages = {
+  title: "Languages",
+  items: ["English", "French", "Arabic"],
+};
+
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
