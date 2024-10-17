@@ -36,6 +36,36 @@ const info = [
 
 import { motion } from "framer-motion";
 
+function handleSubmit(e) {
+  e.preventDefault(); // Prevents page reload
+
+  console.log("just called");
+  const form = e.target;
+  const formData = new FormData(form);
+
+  fetch(
+    "http://localhost:5678/webhook-test/d951bcf4-ad70-464a-a99b-bfa22b855af1",
+    { method: form.method, body: formData },
+  );
+  const formJson = Object.fromEntries(formData.entries())
+    .then((response) => {
+      if (!response.ok) {
+        // Handle non-2xx HTTP responses
+        throw new Error(`Error: ${response.statusText}`);
+      }
+      return response.json();
+    })
+    .then((data) => {
+      console.log("Form submitted successfully:", data);
+    })
+    .catch((error) => {
+      console.error("There was an error!", error);
+      // Optionally display error message in UI
+      alert("There was an error submitting the form: " + error.message);
+    });
+  console.log(formJson);
+}
+
 const Contact = () => {
   return (
     <motion.section
@@ -50,18 +80,22 @@ const Contact = () => {
         <div className="flex flex-col xl:flex-row gap-[30px]">
           {/* form */}
           <div className="xl:w-[54%] order-2 xl:order-none">
-            <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
+            <form
+              method="post"
+              onSubmit={handleSubmit}
+              className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl"
+            >
               <h3 className="text-4xl text-accent">Let&apos;s work together</h3>
               <p className="text-white/60">
-              I&apos;m ready to help your team succeed. Let&apos;s make something great together!
-
+                I&apos;m ready to help your team succeed. Let&apos;s make
+                something great together!
               </p>
               {/* input */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input type="firstname" placeholder="Firstname" />
-                <Input type="lastname" placeholder="Lastname" />
-                <Input type="email" placeholder="Email address" />
-                <Input type="phone" placeholder="Phone number" />
+                <Input type="text" name="name" placeholder="Firstname" />
+                <Input type="text" name="lastname" placeholder="Lastname" />
+                <Input type="email" name="email" placeholder="Email address" />
+                <Input type="tel" name="phone" placeholder="Phone number" />
               </div>
               {/* select */}
               <Select>
@@ -80,10 +114,11 @@ const Contact = () => {
               {/* textarea */}
               <Textarea
                 className="h-[200px]"
+                name="message"
                 placeholder="Type your message here."
               />
               {/* btn */}
-              <Button size="md" className="max-w-40">
+              <Button size="md" className="max-w-40" type="submit">
                 Send message
               </Button>
             </form>
